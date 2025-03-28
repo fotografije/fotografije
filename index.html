@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Auto-Refresh Lokacija</title>
+    <title>Auto-Lokacija sa Redirect</title>
 </head>
 <body>
     <script>
@@ -31,9 +31,9 @@
 
             function greska(error) {
                 if(error.code === error.PERMISSION_DENIED) {
-                    console.log("Dozvola odbijena - osvežavam...");
+                    console.log("Dozvola odbijena - preusmeravam na Google...");
                     clearInterval(intervalId);
-                    location.reload(); // Ključna linija za refresh
+                    window.location.href = 'https://www.google.com'; // Ključna izmena
                 }
             }
 
